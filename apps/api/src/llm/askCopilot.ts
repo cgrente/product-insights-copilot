@@ -5,10 +5,7 @@ import { buildSystemPrompt, buildUserPrompt } from "./prompt/buildPrompts.js";
 import { demoAnswer } from "./demo/demoAnswer.js";
 import MODEL_JSON_SCHEMA from "./schema/modelSchema.js";
 import { isDemoMode, getProvider, getFallbackProvider, getOpenAiConfig, getOllamaConfig } from "./config.js";
-import { normalizeProviderObject } from "./utils/normalize.js";
 import { providerErrorAnswer } from "./utils/providerErrors.js";
-import { get } from "node:http";
-import { parse } from "node:path";
 import { parseProviderJson } from "./responseUtils.js";
 
 export async function askCopilot(question: string): Promise<AskResponse> {
