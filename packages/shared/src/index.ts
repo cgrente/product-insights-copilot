@@ -4,6 +4,7 @@ export const AskRequestSchema = z.object({
   question: z.string().min(3).max(800),
 });
 
+// This creates a TypeScript type automatically from the schema.
 export type AskRequest = z.infer<typeof AskRequestSchema>;
 
 export const EvidenceSchema = z.object({
@@ -12,6 +13,7 @@ export const EvidenceSchema = z.object({
   note: z.string().optional(),
 });
 
+// This creates a TypeScript type automatically from the schema.
 export type Evidence = z.infer<typeof EvidenceSchema>;
 
 export const AskResponseSchema = z.object({
@@ -41,4 +43,5 @@ export const AskResponseSchema = z.object({
     .optional(),
 });
 
+// This creates a TypeScript type automatically from the schema.
 export type AskResponse = z.infer<typeof AskResponseSchema>;
