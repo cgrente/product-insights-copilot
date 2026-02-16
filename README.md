@@ -21,6 +21,41 @@ and **safe fallbacks**.
 
 ---
 
+## Why I built this ?
+
+I built this project to explore and learn how an LLM can be integrated as a product feature, not as a research experiment.
+
+The goal was to demonstrate/learn how to ship an AI-powered experience while keeping strong control over data, outputs and failure modes.
+The copilot answers questions only from a small, fixed analytics dataset so that behavior is predictable and easy to reason about.
+
+I intentionally focused on :
+
+- strict schema validation for all LLM outputs
+- explicit handling of provider failures ( timeouts, invalid JSON, missing data )
+- clear user feedback when a question cannot be answered safely
+
+This project is intentionally small and opinionated.
+It prioritizes trust and correctness over flexibility or creativity.
+
+---
+
+## Known limitations
+
+This is a learning and demonstration project, not a production system.
+
+Current limitations include :
+- The dataset is static and embedded
+- No authentication or user management ( demo-only )
+- Ollama output formatting can be inconsistent compared to OpenAI strict schema mode
+- No conversational memory or session data
+- Limited question types supported by the demo logic
+
+Future steps would be :
+
+- Introduce retrieval from a real data source
+- add "golden tests" to detect prompt or output regressions
+- expand supported analytics questions in a controlled way
+
 ## Repo structure
 
 This reflects the repo layout you shared (excluding ignored folders like `node_modules/` and build outputs):
