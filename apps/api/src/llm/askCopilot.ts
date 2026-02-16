@@ -157,7 +157,6 @@ export async function askCopilot(question: string): Promise<AskResponse> {
 
   const provider = getProvider();
   const fallback = getFallbackProvider();
-
   const systemPrompt = `
 You are a product analytics copilot.
 
@@ -174,6 +173,8 @@ Rules:
 - If the question cannot be answered from the data, set insufficientData=true.
 - Always include citations and evidence arrays (can be empty).
 - Do not wrap JSON in markdown.
+- SAMPLE_DATA.pages[INDEX].views
+- SAMPLE_DATA.pages[INDEX].path
 `.trim();
 
   const userPrompt = `
