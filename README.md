@@ -68,8 +68,6 @@ This reflects the repo layout you shared (excluding ignored folders like `node_m
 │  │  │  ├─ __tests__/
 │  │  │  ├─ data/
 │  │  │  ├─ llm/
-│  │  │  │  ├─ askCopilot.ts
-│  │  │  │  └─ ollamaClient.ts
 │  │  │  ├─ app.ts
 │  │  │  └─ server.ts
 │  │  ├─ .env.example
